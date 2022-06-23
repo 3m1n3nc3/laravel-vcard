@@ -71,7 +71,7 @@ class Vcard implements Responsable, Stringable
         return $this;
     }
 
-    public function address(string address, array $types = [Tel::WORK]): self
+    public function address(string $address, array $types = [Tel::WORK]): self
     {
         $this->properties[] = new Address(address, $types);
 
