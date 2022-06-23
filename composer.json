@@ -1,5 +1,5 @@
 {
-    "name": "astrotomic/laravel-vcard",
+    "name": "3m1n3nc3/laravel-vcard",
     "type": "library",
     "description": "A fluent builder class for vCard files.",
     "keywords": [
@@ -17,6 +17,12 @@
             "email": "gummibeer@astrotomic.info",
             "homepage": "https://gummibeer.de",
             "role": "Developer"
+        },
+        {
+            "name": "3m1n3nc3",
+            "email": "3m1n3nc3@toneflix.com.ng",
+            "homepage": "https://3m1n3nc3.toneflix.com.ng",
+            "role": "Package Bump"
         }
     ],
     "require": {
