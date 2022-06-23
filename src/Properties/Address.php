@@ -2,7 +2,7 @@
 
 namespace Astrotomic\Vcard\Properties;
 
-class Tel extends Property
+class Address extends Property
 {
     public const DOM = 'DOM';
     public const INTL = 'INTL';
