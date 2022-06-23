@@ -22,13 +22,13 @@
     "require": {
         "php": "^8.0",
         "astrotomic/php-conditional-proxy": "^0.2.1",
-        "illuminate/contracts": "^8.0",
-        "illuminate/http": "^8.0",
-        "illuminate/support": "^8.0"
+        "illuminate/contracts": "^9.0",
+        "illuminate/http": "^9.0",
+        "illuminate/support": "^9.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^6.0",
-        "phpunit/phpunit": "^9.3",
+        "orchestra/testbench": "^7.0",
+        "phpunit/phpunit": "^9.5",
         "spatie/phpunit-snapshot-assertions": "^4.2"
     },
     "config": {
