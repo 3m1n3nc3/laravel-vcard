@@ -1,5 +1,5 @@
 {
-    "name": "3m1n3nc3/laravel-vcard",
+    "name": "astrotomic/laravel-vcard",
     "type": "library",
     "description": "A fluent builder class for vCard files.",
     "keywords": [
