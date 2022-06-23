@@ -11,6 +11,7 @@ use Astrotomic\Vcard\Properties\Member;
 use Astrotomic\Vcard\Properties\Org;
 use Astrotomic\Vcard\Properties\Photo;
 use Astrotomic\Vcard\Properties\Role;
+use Astrotomic\Vcard\Properties\Address;
 use Astrotomic\Vcard\Properties\Tel;
 use Astrotomic\Vcard\Properties\Title;
 use Astrotomic\Vcard\Properties\Url;
@@ -66,6 +67,13 @@ class Vcard implements Responsable, Stringable
     public function email(string $email, array $types = [Email::INTERNET]): self
     {
         $this->properties[] = new Email($email, $types);
+
+        return $this;
+    }
+
+    public function address(string address, array $types = [Tel::WORK]): self
+    {
+        $this->properties[] = new Address(address, $types);
 
         return $this;
     }
