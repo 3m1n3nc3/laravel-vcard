@@ -33,12 +33,20 @@ class Vcard implements Responsable, Stringable
     protected ?string $middleName = null;
     protected ?string $lastName = null;
     protected ?string $nameSuffix = null;
+    protected ?string $provider = 'Astrotomic vCard';
 
     protected array $properties = [];
 
     public static function make(): self
     {
         return new static();
+    }
+
+    public function provider(?string $provider): self
+    {
+        $this->provider = $provider;
+
+        return $this;
     }
 
     public function fullName(?string $fullName): self
@@ -157,7 +165,7 @@ class Vcard implements Responsable, Stringable
             $this->hasNameParts() ? "N;CHARSET=UTF-8:{$this->lastName};{$this->firstName};{$this->middleName};{$this->namePrefix};{$this->nameSuffix}" : null,
             array_map('strval', $this->properties),
             sprintf('REV:%s', Carbon::now()->toISOString()),
-            'PRODID:-//Astrotomic vCard',
+            'PRODID:-//' . $this->provider,
             'END:VCARD',
         ])->flatten()->filter()->implode(PHP_EOL);
     }
